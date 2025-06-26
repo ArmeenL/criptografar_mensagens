@@ -3,6 +3,7 @@ import random
 # Conjunto de caracteres a serem usados
 caracteres = list("ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,;:-_!?@#$%^&*()[]{}<>/|\\+=")
 
+#Embaralhar caracteres aumentando a aleatoriedade
 caracteres_embaralhados = caracteres.copy()
 random.shuffle(caracteres_embaralhados)
 
