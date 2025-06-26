@@ -1,3 +1,6 @@
+#A criptografia por substituição é um método mais geral onde 
+#cada letra do alfabeto é substituída por outra com base em uma chave de substituição personalizada.
+
 import random
 
 # Conjunto de caracteres a serem usados
@@ -12,7 +15,7 @@ CHAVE = {}
 for original, substituto in zip(caracteres, caracteres_embaralhados):
     CHAVE[original] = substituto
 
-# Cria a chave reversa
+# Cria a chave reversa. Usada para descriptografar a chave original
 CHAVE_REVERSA = {valor: chave for chave, valor in CHAVE.items()}
 
 
@@ -27,6 +30,7 @@ def criptografar_mensagem(mensagem):
     return resultado
 
 # Descriptografar mensagem
+# Basicamente o mesmo processo de criptografar, mas com a chave reversa
 def descriptografar_mensagem(mensagem):
     resultado = ''
     for letra in mensagem.upper():
